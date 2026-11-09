@@ -1,0 +1,12 @@
+{
+  "tarjeta": [45000, 65000],
+  "volante": [38000, 52000],
+  "pendon_m2": 55000,
+  "aviso_bastidor_m2": 48000,
+  "merch": {
+    "camiseta": 42000,
+    "mug": 28000,
+    "libreta": 19500,
+    "calendario": 15000
+  }
+}
