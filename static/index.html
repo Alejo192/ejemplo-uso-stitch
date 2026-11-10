@@ -508,10 +508,19 @@ animateBars();
 
 const playBtn = document.getElementById("playBtn");
 const vinyl = document.getElementById("vinyl");
+const audio = document.getElementById("reproductorAudio"); // Vincula el audio
+
 playBtn.addEventListener("click", ()=>{
   playing = !playing;
   playBtn.textContent = playing ? "⏸" : "▶";
-  vinyl.classList.toggle("spin", playing);
+  vinyl.classList.toggle("spin", playing); // Gira el vinilo
+  
+  // Lógica para reproducir/pausar la música simultáneamente
+  if (playing) {
+    audio.play();
+  } else {
+    audio.pause();
+  }
 });
 document.getElementById("shuffleBtn").addEventListener("click", e=>e.currentTarget.classList.toggle("active"));
 document.getElementById("repeatBtn").addEventListener("click", e=>e.currentTarget.classList.toggle("active"));
@@ -834,5 +843,6 @@ document.getElementById("orderForm").addEventListener("submit", async (e)=>{
 /* ================= boot ================= */
 cargarPrecios();
 </script>
+<audio id="reproductorAudio" src="/static/cancion.mp3"></audio>
 </body>
 </html>
